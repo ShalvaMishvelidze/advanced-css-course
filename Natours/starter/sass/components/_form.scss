@@ -1,6 +1,14 @@
 .form {
-  &__group:not(:last-child) {
-    margin-bottom: 2rem;
+  &__group {
+    &:not(:last-child) {
+      margin-bottom: 2rem;
+    }
+
+    &:last-child {
+      @include respond(tab-portrait) {
+        text-align: center;
+      }
+    }
   }
 
   &__input {
@@ -15,6 +23,10 @@
     display: block;
     color: inherit;
     transition: all 0.3s;
+
+    @include respond(tab-portrait) {
+      width: 100%;
+    }
 
     &:focus {
       outline: none;
@@ -49,6 +61,11 @@
   &__radio-group {
     width: 49%;
     display: inline-block;
+
+    @include respond(tab-portrait) {
+      width: 100%;
+      margin-bottom: 2rem;
+    }
   }
 
   &__radio-input {
@@ -59,7 +76,7 @@
     font-size: $font-size-default;
     cursor: pointer;
     position: relative;
-    padding-left: 3.5rem;
+    padding-left: 4.5rem;
   }
 
   &__radio-button {
