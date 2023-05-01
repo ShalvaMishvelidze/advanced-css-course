@@ -1585,6 +1585,7 @@ body {
   opacity: 0;
   visibility: hidden;
   transition: opacity 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  display: none;
 }
 .navigation__list {
   position: absolute;
@@ -1629,6 +1630,7 @@ body {
 .navigation__checkbox:checked ~ .navigation__nav {
   opacity: 1;
   visibility: visible;
+  display: block;
 }
 .navigation__icon {
   position: relative;
